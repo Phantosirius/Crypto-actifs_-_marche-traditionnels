@@ -17,5 +17,5 @@ et ne formule aucune recommandation d’investissement.
 
 st.subheader("Accès à l’agent")
 st.markdown("""
-👉 [Accéder à l’agent IA](https://lien-vers-ton-agent)
+👉 [Accéder à l’agent IA](https://m365.cloud.microsoft:443/chat/?titleId=T_3aa88487-717f-a357-2e02-7f35061efd73&source=embedded-builder)
 """)

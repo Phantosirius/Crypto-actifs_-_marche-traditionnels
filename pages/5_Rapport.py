@@ -16,10 +16,3 @@ Les sections précédentes de l’application servent de support
 de lecture et de visualisation.
 """)
 
-with open("assets/report.pdf", "rb") as f:
-    st.download_button(
-        label="📄 Télécharger le rapport complet (PDF)",
-        data=f,
-        file_name="Crypto_vs_Marches_Traditionnels.pdf",
-        mime="application/pdf"
-    )
