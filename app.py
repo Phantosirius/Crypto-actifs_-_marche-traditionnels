@@ -1,23 +1,52 @@
 import streamlit as st
+import os
 
+# --------------------------------------------------
+# CONFIG PAGE
+# --------------------------------------------------
 st.set_page_config(
-    page_title="Crypto vs Marchés Traditionnels",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    page_title="Crypto-actifs & Marchés Traditionnels",
+    layout="wide"
 )
 
-st.title("Crypto vs marchés traditionnels : mémoire longue et régimes")
+# --------------------------------------------------
+# TITRE
+# --------------------------------------------------
+st.title("Crypto-actifs & Marchés Traditionnels")
+st.subheader("Persistance de la volatilité et mémoire longue")
 
 st.markdown("""
-Cette application Streamlit accompagne un projet académique portant sur la comparaison
-des dynamiques des cryptomonnaies et des marchés financiers traditionnels.
-
-L’analyse économétrique est réalisée en amont.
-Cette interface a pour objectif de **présenter**, **visualiser** et **documenter**
-les résultats de manière structurée et interactive.
+Présentation interactive du rapport académique  
+**Crypto-actifs vs Marchés traditionnels**  
 """)
 
-st.info(
-    "Navigation via le menu à gauche. "
-    "Les résultats complets sont disponibles dans la page **Rapport**."
+st.markdown("---")
+
+# --------------------------------------------------
+# CHEMIN ABSOLU SÉCURISÉ
+# --------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+PDF_PATH = os.path.join(
+    BASE_DIR,
+    "assets",
+    "Crypto_actifs_vs_Marchés_Traditionnels___Persistance_de_la_Volatilité_et_Mémoire_Longue.pdf"
 )
+
+# --------------------------------------------------
+# TÉLÉCHARGEMENT PDF
+# --------------------------------------------------
+if os.path.exists(PDF_PATH):
+    with open(PDF_PATH, "rb") as f:
+        st.download_button(
+            label="📄 Télécharger le rapport complet (PDF)",
+            data=f,
+            file_name="rapport_crypto_volatilite.pdf",
+            mime="application/pdf"
+        )
+else:
+    st.error(f"❌ Fichier introuvable : {PDF_PATH}")
+
+st.markdown("""
+👉 Utilise le menu à gauche pour naviguer dans la présentation.
+""")
