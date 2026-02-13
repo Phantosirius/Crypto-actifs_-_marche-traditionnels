@@ -1,51 +1,53 @@
 import streamlit as st
 
-st.title("1️⃣ Introduction")
+st.title("1. Introduction")
 
 st.markdown("""
-## 🌍 Contexte économique et financier
+## Contexte général
 
-L’émergence des crypto-actifs, initiée par le Bitcoin en 2009, a profondément transformé
-le paysage financier mondial. Initialement perçus comme des actifs marginaux,
-ils se sont progressivement intégrés aux marchés financiers traditionnels,
-notamment à travers l’apparition des **ETF spot** sur Bitcoin et Ethereum.
+L’intégration progressive des crypto-actifs dans le système financier international
+constitue l’un des phénomènes majeurs des marchés financiers contemporains.
+Initialement perçus comme des actifs spéculatifs marginaux, le Bitcoin et l’Ethereum
+ont progressivement attiré des flux institutionnels significatifs, notamment à travers
+le lancement des ETF spot.
 
-Cette institutionnalisation marque une nouvelle phase, souvent qualifiée de
-**« wall-streetisation »**, caractérisée par :
-- une augmentation massive de la liquidité,
-- l’entrée d’investisseurs institutionnels,
-- une interconnexion accrue avec les marchés traditionnels.
+Cette institutionnalisation a profondément modifié la microstructure des marchés
+crypto, en augmentant la liquidité, en réduisant certaines inefficiences et en
+renforçant les interconnexions avec les marchés traditionnels.
 """)
 
 st.markdown("""
-## ❓ Problématique centrale
+## Problématique
 
-Cette intégration soulève une question économétrique fondamentale :
-
-**Les crypto-actifs ont-ils perdu leur caractère fractal et non linéaire,
-ou bien ces propriétés persistent-elles malgré leur maturité croissante ?**
+D’un point de vue économétrique, cette évolution soulève une question centrale :
+les propriétés statistiques spécifiques aux crypto-actifs, telles que la non-linéarité
+et la mémoire longue de la volatilité, ont-elles été atténuées par leur maturité
+croissante ou persistent-elles malgré l’intégration institutionnelle ?
 """)
 
 st.markdown("""
-Plus précisément, nous cherchons à déterminer :
-- si la volatilité des crypto-actifs présente une **mémoire longue**,
-- si cette mémoire est plus marquée que sur les marchés traditionnels,
-- et quelles sont les implications en matière de **gestion du risque**.
+## Objectifs de l’étude
+
+L’objectif de ce travail est double :
+- analyser la persistance de la volatilité des crypto-actifs,
+- comparer cette persistance à celle observée sur les marchés traditionnels.
+
+L’enjeu est d’évaluer la pertinence des modèles à mémoire longue pour la gestion
+du risque sur les marchés crypto-financiers.
 """)
 
 st.markdown("""
-## 🧪 Hypothèses de recherche
+## Hypothèses testées
 
-- **H1** : Les proxys de volatilité du Bitcoin et de l’Ethereum présentent une mémoire longue significative  
-- **H2** : Les dynamiques observées sont non linéaires (rejet du test BDS)  
-- **H3** : L’institutionnalisation n’a pas éliminé la structure fractale des crypto-actifs
+- H1 : les proxys de volatilité du Bitcoin et de l’Ethereum présentent une mémoire longue significative ;
+- H2 : les dynamiques observées sont non linéaires, même après filtrage ARMA-GARCH ;
+- H3 : l’institutionnalisation des crypto-actifs n’a pas éliminé leur structure fractale.
 """)
 
 st.markdown("""
-## 🛠️ Approche méthodologique
+## Démarche méthodologique
 
-Notre analyse combine :
-- faits stylisés et analyse descriptive,
-- tests économétriques (stationnarité, non-linéarité, persistance),
-- modélisation avancée via les modèles **ARFIMA**.
+L’analyse repose sur une combinaison de faits stylisés, de tests économétriques
+(stationnarité, non-linéarité, persistance) et de modèles ARFIMA, conformément
+à la démarche de Box-Jenkins étendue à la mémoire longue.
 """)
